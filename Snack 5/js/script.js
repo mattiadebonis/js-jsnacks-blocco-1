@@ -1,9 +1,9 @@
 //variabili
-var array = [""];
+var array = [];
 var dispari = false;
 
 //funzione per verificare se il numero è dispari
-function eDispari (num) {
+function isOdd (num) {
     var risultato = false;
     if (numeroUtente % 2 != 0){
         risultato = true;
@@ -17,10 +17,14 @@ for(i=0; i<7; i++){
         var numeroUtente = parseInt(prompt("inserisci " + i + "° numero"))
 
     }while(isNaN(numeroUtente))
+    
+    if (isOdd(numeroUtente)==true){
+        array.push(numeroUtente);
+    }
+    
 }
 
 //chiama la funzione per stabilire se è dispari
-risultato = eDispari(numeroUtente);
 
 // Stampa l'array nella console.
-console.log(risultato)
+console.log(array)
